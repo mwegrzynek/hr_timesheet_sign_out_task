@@ -32,9 +32,9 @@ class HrSOProject(Model):
     _description = 'Sign Out By Project / Task'
     
     date_start = fields.Datetime('Starting Date', readonly=True)
-    project_id = fields.Many2one('project.project', 'Project', domain=[('analytic_account_id', '=', True)], ondelete='cascade')
+    project_id = fields.Many2one('project.project', 'Project', domain=[('analytic_account_id', '<>', False)], ondelete='cascade', required=True)
     account_id = fields.Many2one('account.analytic.account', 'Analytic account', related='project_id.analytic_account_id', store=True, ondelete='cascade')
-    task_id = fields.Many2one('project.task', 'Task', domain=[('project_id', '=', project_id)], ondelete='cascade')
+    task_id = fields.Many2one('project.task', 'Task', ondelete='cascade')
     
     @api.model
     def _write(self, *args, **kwargs):

@@ -37,6 +37,7 @@ Modification for extending sign in / sign out
         'project_timesheet'
     ],
     'data': [
+        'views/hr_so_project.xml'
     ],
     'demo': [
     ],

@@ -40,7 +40,7 @@ class TestTimeSheetSignoutTask(common.TransactionCase):
         sip = self.env['hr.sign.in.project'].create(dict(date=five_min_before))
         
         res = sip.check_state()
-        self.assertEqual(res['views'][0][0], self.env.ref('hr_timesheet.view_hr_timesheet_sign_in').id)
+        self.assertEqual(res['views'][0][0], self.env.ref('hr_timesheet_sign_out_task.hr_timesheet_sign_project_task').id)
         
         sip.sign_in_result()
         
@@ -80,8 +80,7 @@ class TestTimeSheetSignoutTask(common.TransactionCase):
             date=now
         ))
         sop.sign_out_result_end()
-        
-        self.env.cr.commit()
+
         
         
         

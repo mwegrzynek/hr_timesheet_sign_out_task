@@ -22,17 +22,17 @@ from datetime import datetime
 
 
 from openerp import fields, api, _
-from openerp.models import Model
+from openerp.models import TransientModel
 from openerp.exceptions import except_orm
 
 
-class HrSOProject(Model):
+class HrSOProject(TransientModel):
     _name = 'hr.sign.out.project'
     _inherit = 'hr.sign.out.project'
     _description = 'Sign Out By Project / Task'
     
     date_start = fields.Datetime('Starting Date', readonly=True)
-    project_id = fields.Many2one('project.project', 'Project', domain=[('analytic_account_id', '<>', False)], ondelete='cascade', required=True)
+    project_id = fields.Many2one('project.project', 'Project', domain=[('analytic_account_id', '<>', False)], ondelete='cascade')
     account_id = fields.Many2one('account.analytic.account', 'Analytic account', related='project_id.analytic_account_id', store=True, ondelete='cascade')
     task_id = fields.Many2one('project.task', 'Task', ondelete='cascade')
     

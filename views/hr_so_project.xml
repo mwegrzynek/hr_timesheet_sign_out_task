@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <data>
                     <field name="account_id" position="replace" >               
-                       <field name="project_id" colspan="2" />
+                       <field name="project_id" colspan="2" required="1" />
                     </field>
                     <field name="project_id" position="after">
                         <field name="task_id" colspan="2" domain="[('project_id', '=', project_id)]" />

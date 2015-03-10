@@ -21,7 +21,7 @@
 
 {
     'name': 'Allow to use project tasks in timesheet sign in/out forms',
-    'version': '1.0.0',
+    'version': '1.0.1',
     'category': 'Human Resources',
     'description': """
 

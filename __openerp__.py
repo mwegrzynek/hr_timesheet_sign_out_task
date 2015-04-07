@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
+#    Odoo, Open Source Management Solution
+#    Copyright (C) 2005-Today Litex Service Sp. z o.o. 
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,7 +18,6 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
     'name': 'Allow to use project tasks in timesheet sign in/out forms',
     'version': '1.0.1',
@@ -28,7 +27,9 @@
 Allow to use project tasks in timesheet sign in/out forms
 =========================================================
 
-Modification for extending sign in / sign out
+In standard Odoo installation you sign in / sign out to an analytic account.
+This module changes that to allow signing in / out to project and tasks. It also creates
+task work records automatically. 
     """,
     'author': 'Litex Service Sp. z o.o.',
     'website': 'http://www.litex.pl',
